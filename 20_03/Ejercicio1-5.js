@@ -8,7 +8,6 @@ let x = 10;
 }
 console.log("x fuera:");
 console.log(x);
-generará un error
 console.log("y fuera:");
 console.log(y);
 //"y" no se puede imprimir fuera del bloque porque let tiene alcance de bloque (scope), así que solo existe dentro de {}.
