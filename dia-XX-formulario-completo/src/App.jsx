@@ -23,8 +23,9 @@ const paises = ['Argentina', 'Brasil', 'Chile', 'Colombia', 'México', 'Perú'];
 function App() {
   const [form, setForm] = useState(initialForm);
   const [submittedData, setSubmittedData] = useState(null);
-  const [emailValido, setEmailValido] = useState(false);
   const [mostrarErrores, setMostrarErrores] = useState(false);
+
+  const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.correo);
 
   const handleChange = (event) => {
     const { name, value, type, checked, files } = event.target;
@@ -50,10 +51,6 @@ function App() {
     }
 
     setForm((prev) => ({ ...prev, [name]: value }));
-
-    if (name === 'correo') {
-      setEmailValido(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value));
-    }
   };
 
   const handleSubmit = (event) => {
