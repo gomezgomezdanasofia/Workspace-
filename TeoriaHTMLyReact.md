@@ -1,5 +1,7 @@
 ACTIVIDAD
 1). HTML
+
+
 -Cuales son las etiquetas de estructura de un HTML
 
 R//Etiquetas de estructura de un HTML
@@ -45,105 +47,220 @@ Etiqueta
 5.<span> — Contenedor de texto en línea sin significado propio, usado para aplicar estilos o scripts a una parte específica del texto sin romper el orden del párrafo.
 
 2). Javascript
+
+  
 -Explica como funciona, las variables, tipos de variables, constantes y globales
-  Actividad: HTML, JavaScript, CSS y React
-1) HTML
-Etiquetas de estructura de un HTML
+  
+R// JavaScript es un lenguaje de programación interpretado, dinámico y de tipado débil, que se ejecuta principalmente en el navegador (y también en servidores con Node.js). El navegador lee el código línea por línea y lo va ejecutando, permitiendo manipular el HTML y el CSS de una página en tiempo real (esto se conoce como DOM — Document Object Model).
 
-Son las etiquetas que forman el "esqueleto" básico de cualquier documento HTML:
-
-Etiqueta	Función
-<!DOCTYPE html>	Indica al navegador que el documento usa HTML5
-<html>	Etiqueta raíz que envuelve todo el documento
-<head>	Contiene metadatos: título, enlaces a CSS, meta tags, etc. (no visible en pantalla)
-<title>	Define el título que aparece en la pestaña del navegador
-<meta>	Metadatos como charset, descripción, viewport
-<body>	Contiene todo el contenido visible de la página
-<header>	Encabezado de la página o de una sección
-<nav>	Sección de enlaces de navegación
-<main>	Contenido principal del documento
-<section>	Agrupa contenido temáticamente relacionado
-<article>	Contenido independiente y autocontenible (ej: un post)
-<aside>	Contenido secundario, relacionado pero separado (ej: barra lateral)
-<footer>	Pie de página
-<div>	Contenedor genérico sin significado semántico
-Etiquetas para agregar código
-
-Cuando se necesita mostrar o vincular código en una página:
-
-Etiqueta	Función
-<script>	Inserta o enlaza código JavaScript
-<style>	Inserta CSS directamente en el HTML
-<link>	Enlaza archivos externos, como hojas de estilo CSS (rel="stylesheet")
-<code>	Muestra un fragmento de código en línea, con formato monoespaciado
-<pre>	Preserva espacios y saltos de línea, útil para bloques de código
-<noscript>	Contenido alternativo si JavaScript está deshabilitado
-
-Ejemplo típico:
-
-html
-<pre><code>
-function saludar() {
-  console.log("Hola mundo");
-}
-</code></pre>
-5 etiquetas de texto explicadas
-<h1> a <h6> — Encabezados o títulos, <h1> es el más importante (mayor jerarquía) y <h6> el menos importante. Se usan para dar estructura y jerarquía visual/semántica al contenido.
-<p> — Define un párrafo de texto. Cada <p> genera un bloque separado con espacio antes y después.
-<strong> — Resalta texto dándole importancia semántica fuerte; visualmente se muestra en negrita.
-<em> — Enfatiza texto de forma semántica; visualmente se muestra en cursiva. A diferencia de <i>, sí tiene significado (énfasis real).
-<span> — Contenedor de texto en línea sin significado semántico propio, usado para aplicar estilos o scripts a una parte específica del texto sin romper el flujo del párrafo.
-2) JavaScript
-¿Cómo funciona? Variables, tipos, constantes y globales
-
-JavaScript es un lenguaje de programación interpretado, dinámico y de tipado débil, que se ejecuta principalmente en el navegador (y también en servidores con Node.js). El navegador lee el código línea por línea y lo va ejecutando, permitiendo manipular el HTML y el CSS de una página en tiempo real (esto se conoce como DOM — Document Object Model).
-
-Variables
-
+Variables:
 Son espacios en memoria que almacenan valores. Se declaran con tres palabras clave:
 
 javascript
 var nombre = "Ana";   // forma antigua, tiene alcance de función
 let edad = 25;         // forma moderna, tiene alcance de bloque
 const PI = 3.1416;     // valor que no puede reasignarse
+
 var: forma antigua de declarar variables. Su alcance (scope) es de función, no de bloque, lo que puede causar errores. Se recomienda evitarla.
 let: permite declarar variables cuyo valor puede cambiar. Su alcance es de bloque ({ }).
 const: declara una constante, cuyo valor no puede reasignarse una vez definido (aunque si es un objeto o array, su contenido interno sí puede modificarse).
 
 Tipos de variables (tipos de datos)
 
-Tipo	Ejemplo
-String	"Hola"
-Number	42, 3.14
-Boolean	true, false
-Undefined	variable declarada sin valor
-Null	ausencia intencional de valor
-Object	{ nombre: "Ana" }
-Array	[1, 2, 3]
-Function	function() {}
+Tipo	
+String	Ejemplo= "Hola"
+Number	Ejemplo= 42, 3.14
+Boolean	Ejemplo= true, false
+Undefined	Ejemplo= variable declarada sin valor
+Null	Ejemplo= ausencia intencional de valor
+Object	Ejemplo= { nombre: "Ana" }
+Array Ejemplo=	[1, 2, 3]
+Function	Ejemplo= function() {}
 
-Variables globales vs locales
+Variables globales vs locales:
 
 Variable global: se declara fuera de cualquier función, y puede usarse en cualquier parte del código.
 Variable local: se declara dentro de una función o bloque, y solo existe dentro de ese contexto.
-javascript
+  
+javascript 
 let global = "Soy accesible en todo el archivo";
 
 function ejemplo() {
   let local = "Solo existo dentro de esta función";
 }
-Estructuras de flujo (estructuras de control)
+
+
+-Explicar las estructuras de flujo
+
+
+  
+  Estructuras de flujo (estructuras de control)
 
 Controlan el orden en que se ejecutan las instrucciones:
 
 Condicionales
--Explicar las estructuras de flujo
+
+javascript
+if (edad >= 18) {
+  console.log("Es mayor de edad");
+} else if (edad > 12) {
+  console.log("Es adolescente");
+} else {
+  console.log("Es niño");
+}
+javascript
+switch (dia) {
+  case "Lunes":
+    console.log("Inicio de semana");
+    break;
+  default:
+    console.log("Otro día");
+}
+
+Bucles (loops)
+javascript
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+for: se usa cuando se conoce cuántas veces se repetirá.
+while: repite mientras se cumpla una condición (evalúa antes).
+do...while: repite y evalúa la condición al final, por lo que se ejecuta al menos una vez.
 
 3).CSS
-Consultar selectores css y como modificar elementos
+
+  
+Consultar selectores css y como modificar elementos:
+
+Selectores CSS y cómo modificar elementos
+
+CSS (Cascading Style Sheets) se usa para dar estilo a los elementos HTML mediante selectores, que indican a qué elementos se les aplicará el estilo.
+
+Selector: Elemento     	Ejemplo: P { }	       Descripción: Selecciona todas las etiquetas <p>
+Selector: Clase  	      Ejemplo: .destacado { }	     Descripción: Selecciona elementos con class="destacado"
+Selector: ID	          Ejemplo: #titulo { }		 Descripción : Selecciona el elemento con id="titulo"
+Selector: Universal   	Ejemplo: * { }		  Descripción : Selecciona todos los elementos
+Selector: Descendiente	Ejemplo: div p { }		 Descripción : Selecciona <p> dentro de <div>
+Selector: Hijo directo	Ejemplo: div > p { }		Descripción : Selecciona <p> que sea hijo directo de <div>
+Selector: Pseudo-clase	Ejemplo: a:hover { }	  	Descripción : Aplica estilo en un estado, ej. al pasar el mouse
+Selector: Pseudo-elemento	  Ejemplo: p::first-line { }		Descripción : Aplica estilo a una parte específica del elemento
+Selector: Atributo	   Ejemplo: input[type="text"] { }	  	Descripción :Selecciona por un atributo específico
+
+
+  
+- Cómo se modifican elementos:
+
+css
+.destacado {
+  color: red;
+  font-size: 18px;
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+Y se enlaza en el HTML así:
+html
+<link rel="stylesheet" href="estilos.css">
+
+o directamente en línea:
+html
+<p style="color: blue;">Texto</p>
 
 4).React
+
+  
 -Hacer una analogia explicativa de un componente de React de como se comporta como una etiqueta de HTML
 -Consultar como funcionan los props en los componentes de React
 -Como y cuando se usa VseEffect en un componente de React
 -Como se usa UseSTaTe para las variables de un componente
+
+
+Analogía: un componente de React como una etiqueta HTML
+
+Un componente de React puede pensarse como una etiqueta HTML personalizada y reutilizable. Así como <button> ya trae su propio comportamiento y apariencia definidos por el navegador, un componente como <TarjetaProducto /> trae su propia estructura, estilo y lógica definidos por el programador.
+
+La diferencia es que, mientras <button> siempre se comporta igual, un componente de React puede recibir información distinta cada vez que se usa (a través de props), igual que una etiqueta <img src="foto.jpg"> recibe un atributo que cambia qué imagen se muestra. En React, en lugar de solo atributos fijos, se pueden pasar textos, números, funciones o incluso otros componentes como "atributos" (props), haciendo que la etiqueta personalizada sea mucho más flexible y dinámica.
+
+jsx
+<TarjetaProducto nombre="Zapatos" precio={50} />
+<TarjetaProducto nombre="Camisa" precio={30} />
+
+Igual que:
+
+html
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+¿Cómo funcionan los props?
+
+Los props (properties) son la forma en que un componente padre le pasa información a un componente hijo. Son de solo lectura: el componente que los recibe no puede modificarlos directamente.
+
+jsx
+function Saludo(props) {
+  return <h1>Hola, {props.nombre}</h1>;
+}
+
+// Uso:
+<Saludo nombre="Carlos" />
+
+Esto renderiza: Hola, Carlos
+
+Los props permiten que un mismo componente se reutilice mostrando datos diferentes cada vez.
+
+¿Cómo y cuándo se usa useEffect?
+
+useEffect es un Hook que permite ejecutar código que produce un "efecto secundario" (side effect) después de que el componente se renderiza. Se usa para tareas como:
+
+Peticiones a una API (fetch)
+Suscripciones a eventos
+Modificar el DOM manualmente
+Temporizadores (setTimeout, setInterval)
+jsx
+import { useEffect, useState } from "react";
+
+function Ejemplo() {
+  const [datos, setDatos] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.ejemplo.com/datos")
+      .then(res => res.json())
+      .then(data => setDatos(data));
+  }, []); // el array vacío indica que se ejecuta solo una vez, al montar el componente
+
+  return <div>{datos ? datos.nombre : "Cargando..."}</div>;
+}
+Si el array de dependencias está vacío [], el efecto se ejecuta solo una vez (al montar el componente).
+Si tiene variables [variable], se ejecuta cada vez que esa variable cambia.
+Si no se pone array, se ejecuta en cada renderizado.
+¿Cómo se usa useState?
+
+useState es el Hook que permite que un componente tenga estado propio (una variable que, al cambiar, hace que el componente se vuelva a renderizar automáticamente).
+
+jsx
+import { useState } from "react";
+
+function Contador() {
+  const [contador, setContador] = useState(0); // valor inicial: 0
+
+  return (
+    <div>
+      <p>Valor actual: {contador}</p>
+      <button onClick={() => setContador(contador + 1)}>Sumar</button>
+    </div>
+  );
+}
+contador es la variable de estado (el valor actual).
+setContador es la función usada para actualizar ese valor.
+useState(0) define el valor inicial.
+
+Cada vez que se llama a setContador, React vuelve a renderizar el componente mostrando el nuevo valor.
